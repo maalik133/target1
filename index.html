@@ -60,14 +60,6 @@ h1 {
   margin-bottom: 8px;
 }
 
-.underline {
-  width: 70px;
-  height: 4px;
-  background: #fff;
-  margin: 0 auto 18px;
-  border-radius: 999px;
-}
-
 .steps {
   display: grid;
   gap: 12px;
@@ -129,12 +121,7 @@ h1 {
   font-size: 12px;
 }
 
-.urgency {
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
+/* 🔥 CTA WITH HOVER + CLICK EFFECT */
 .cta {
   display: block;
   background: #fff;
@@ -145,6 +132,17 @@ h1 {
   font-size: 22px;
   font-weight: 900;
   margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.cta:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .members {
@@ -220,7 +218,6 @@ details p {
 
 <div class="section-title">⚡ 3 Easy Steps</div>
 
-
 <div class="steps">
 
 <div class="step">
@@ -258,8 +255,6 @@ Complete 5 deals today and unlock an extra $250 on top of your reward!
 Limited time offer - fast completers get rewarded first!
 </div>
 </div>
-
-
 
 <a href="https://giftclick.org/aff_c?offer_id=317&aff_id=170653" class="cta">
 Unlock My Reward
