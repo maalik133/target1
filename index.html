@@ -1,376 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Target Rewards Program</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rewards Program</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #d60000;
-      color: #fff;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #d60000;
+  color: #fff;
+}
 
-    .page {
-      width: 100%;
-      max-width: 430px;
-      margin: 0 auto;
-      padding: 38px 22px 55px;
-      text-align: center;
-    }
+.page {
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 36px 20px 50px;
+  text-align: center;
+}
 
-    .brand {
-      font-size: 48px;
-      font-weight: 900;
-      letter-spacing: -1px;
-      margin-bottom: 14px;
-    }
+.brand {
+  font-size: 46px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
 
-    .badge {
-      display: inline-block;
-      background: #fff;
-      color: #d60000;
-      font-weight: 900;
-      padding: 9px 18px;
-      border-radius: 999px;
-      margin-bottom: 26px;
-      font-size: 15px;
-    }
+.badge {
+  background: #fff;
+  color: #d60000;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
 
-    h1 {
-      font-size: 34px;
-      line-height: 1.28;
-      font-weight: 900;
-      margin-bottom: 12px;
-    }
+h1 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
 
-    .subhead {
-      font-size: 20px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
+.subhead {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
 
-    .desc {
-      font-size: 15px;
-      line-height: 1.4;
-      margin-bottom: 14px;
-    }
+.desc {
+  font-size: 14px;
+  margin-bottom: 22px;
+}
 
-    .micro-proof {
-      font-size: 15px;
-      font-weight: 800;
-      margin-bottom: 26px;
-    }
+.section-title {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
 
-    .section-title {
-      font-size: 24px;
-      font-weight: 900;
-      margin-bottom: 10px;
-    }
+.underline {
+  width: 70px;
+  height: 4px;
+  background: #fff;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+}
 
-    .underline {
-      width: 80px;
-      height: 4px;
-      background: #fff;
-      border-radius: 999px;
-      margin: 0 auto 20px;
-    }
+.steps {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
 
-    .steps {
-      display: grid;
-      gap: 13px;
-      margin-bottom: 22px;
-    }
+.step {
+  background: #fff;
+  color: #111;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  text-align: left;
+  align-items: center;
+}
 
-    .step {
-      background: #fff;
-      color: #111;
-      border-radius: 18px;
-      padding: 16px;
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      text-align: left;
-    }
+.num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #d60000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
 
-    .num {
-      min-width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: #d60000;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 18px;
-    }
+.step h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
 
-    .step h3 {
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
+.step p {
+  font-size: 13px;
+}
 
-    .step p {
-      font-size: 14px;
-      line-height: 1.3;
-    }
+.bonus {
+  border: 2px solid #fff;
+  border-radius: 18px;
+  padding: 18px;
+  text-align: left;
+  margin: 20px 0;
+}
 
-    .bonus {
-      border: 2px solid #fff;
-      border-radius: 20px;
-      padding: 20px 18px;
-      text-align: left;
-      margin: 22px 0;
-    }
+.bonus-title {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
 
-    .bonus-title {
-      font-size: 18px;
-      font-weight: 900;
-      margin-bottom: 12px;
-    }
+.bonus-main {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
 
-    .bonus-main {
-      font-size: 20px;
-      line-height: 1.35;
-      font-weight: 900;
-      margin-bottom: 10px;
-    }
+.bonus-small {
+  font-size: 12px;
+}
 
-    .bonus-small {
-      font-size: 13px;
-      font-weight: 700;
-    }
+.urgency {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
 
-    .activity {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.55);
-      border-radius: 16px;
-      padding: 13px 14px;
-      margin-bottom: 20px;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
+.cta {
+  display: block;
+  background: #fff;
+  color: #d60000;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
 
-    .cta {
-      display: block;
-      width: 100%;
-      background: #fff;
-      color: #d60000;
-      text-decoration: none;
-      border-radius: 20px;
-      padding: 23px 18px;
-      font-size: 25px;
-      font-weight: 900;
-      margin: 20px 0 18px;
-      box-shadow: 0 8px 0 rgba(0,0,0,0.08);
-    }
+.members {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
 
-    .members {
-      font-size: 17px;
-      font-weight: 800;
-      margin-bottom: 17px;
-    }
+.proof-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 22px;
+}
 
-    .proof-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 24px;
-    }
+.proof {
+  background: #fff;
+  color: #111;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
 
-    .proof {
-      background: #fff;
-      color: #111;
-      border-radius: 13px;
-      padding: 13px 8px;
-      font-size: 14px;
-      font-weight: 700;
-    }
+.faq {
+  background: #fff;
+  color: #111;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: left;
+}
 
-    .faq {
-      background: #fff;
-      color: #111;
-      border-radius: 18px;
-      padding: 18px 16px 20px;
-      text-align: left;
-    }
+.faq h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
 
-    .faq h2 {
-      font-size: 25px;
-      margin-bottom: 14px;
-      text-align: left;
-    }
+details {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
 
-    details {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 14px;
-      margin-bottom: 10px;
-      background: #fff;
-    }
+summary {
+  font-weight: 900;
+  cursor: pointer;
+}
 
-    summary {
-      cursor: pointer;
-      list-style: none;
-      font-weight: 900;
-      font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
+details p {
+  font-size: 13px;
+  margin-top: 8px;
+}
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::after {
-      content: "+";
-      font-weight: 900;
-    }
-
-    details[open] summary::after {
-      content: "-";
-    }
-
-    details p {
-      font-size: 14px;
-      line-height: 1.35;
-      margin-top: 12px;
-    }
-
-    .bottom-cta {
-      margin-top: 18px;
-    }
-  </style>
+.bottom-cta {
+  margin-top: 18px;
+}
+</style>
 </head>
 
 <body>
-  <main class="page">
-    <div class="brand">Target</div>
 
-    <div class="badge">✓ Rewards Program</div>
+<div class="page">
 
-    <h1>Get a $500 Target Gift Card</h1>
+<div class="brand">Target</div>
 
-    <div class="subhead">Complete Simple Deals → Unlock Your Reward</div>
+<div class="badge">✓ Rewards Program</div>
 
-    <p class="desc">
-      Finish offers and tasks to move through the reward process.
-    </p>
+<h1>Get a $500 Target Gift Card</h1>
 
-    <div class="micro-proof">
-      $1M+ paid out to members
-    </div>
+<div class="subhead">Complete Simple Deals → Unlock Your Reward</div>
 
-    <div class="section-title">⚡ 3 Easy Steps</div>
-    <div class="underline"></div>
+<p class="desc">Complete simple deals to progress toward your reward.</p>
 
-    <section class="steps">
-      <div class="step">
-        <div class="num">1</div>
-        <div>
-          <h3>Click Start My Rewards</h3>
-          <p>Enter your email to get started.</p>
-        </div>
-      </div>
+<div class="section-title">⚡ 3 Easy Steps</div>
+<div class="underline"></div>
 
-      <div class="step">
-        <div class="num">2</div>
-        <div>
-          <h3>Complete Simple Deals</h3>
-          <p>Finish the required offers shown on the next page.</p>
-        </div>
-      </div>
+<div class="steps">
 
-      <div class="step">
-        <div class="num">3</div>
-        <div>
-          <h3>Unlock Your Gift Card</h3>
-          <p>Complete all required steps to unlock your $500 reward.</p>
-        </div>
-      </div>
-    </section>
+<div class="step">
+<div class="num">1</div>
+<div>
+<h3>Click Start Button</h3>
+<p>Enter your email to get started</p>
+</div>
+</div>
 
-    <section class="bonus">
-      <div class="bonus-title">⚡ ⚡ BONUS: Extra $250</div>
-      <div class="bonus-main">
-        Complete 5 deals today and unlock an extra $250 on top of your earnings!
-      </div>
-      <div class="bonus-small">
-        Limited time offer - fast completers get rewarded first!
-      </div>
-    </section>
+<div class="step">
+<div class="num">2</div>
+<div>
+<h3>Complete Simple Deals</h3>
+<p>Complete the required deals shown on the next page</p>
+</div>
+</div>
 
-    <div class="activity">
-      Recent activity: Members are completing deals and unlocking rewards today.
-    </div>
+<div class="step">
+<div class="num">3</div>
+<div>
+<h3>Unlock Your Gift Card</h3>
+<p>Complete all required steps to unlock your $500 reward</p>
+</div>
+</div>
 
-    <a class="cta" href="YOUR_OFFER_LINK_HERE">
-      ✓ Start My Rewards
-    </a>
+</div>
 
-    <div class="members">
-      50K+ members earning daily
-    </div>
+<div class="bonus">
+<div class="bonus-title">⚡ BONUS: Extra $250</div>
+<div class="bonus-main">
+Complete 5 deals today and unlock an extra $250 on top of your earnings!
+</div>
+<div class="bonus-small">
+Limited time offer - fast completers get rewarded first!
+</div>
+</div>
 
-    <section class="proof-grid">
-      <div class="proof">🛡️ 100% Secure</div>
-      <div class="proof">💵 $1M+ Paid Out</div>
-      <div class="proof">👥 50K+ Users</div>
-      <div class="proof">⭐ 4.7★ Rating</div>
-    </section>
+<div class="urgency">
+Limited availability - rewards are distributed daily
+</div>
 
-    <section class="faq">
-      <h2>Frequently Asked Questions</h2>
+<a href="https://giftclick.org/aff_c?offer_id=317&aff_id=170653" class="cta">
+Unlock My Reward
+</a>
 
-      <details>
-        <summary>How long do the deals take?</summary>
-        <p>Most users complete the required deals in under 10–15 minutes, depending on the offers shown.</p>
-      </details>
+<div class="members">50K+ members earning daily</div>
 
-      <details>
-        <summary>What are deals?</summary>
-        <p>Deals are simple tasks like app installs, short surveys, subscriptions, or trial offers. Each completed deal moves you closer to unlocking your reward.</p>
-      </details>
+<div class="proof-grid">
+<div class="proof">🛡️ 100% Secure</div>
+<div class="proof">💲 $1M+ Paid Out</div>
+<div class="proof">👥 50K+ Members</div>
+<div class="proof">⭐ 4.7 Rating</div>
+</div>
 
-      <details>
-        <summary>How many deals do I have to do?</summary>
-        <p>Most users complete 3–5 deals to unlock their reward, depending on availability.</p>
-      </details>
+<div class="faq">
 
-      <details>
-        <summary>Do I need to complete all deals?</summary>
-        <p>Yes. Completing the required deals is how users unlock their full reward.</p>
-      </details>
+<h2>Frequently Asked Questions</h2>
 
-      <details>
-        <summary>Why do I need to complete deals?</summary>
-        <p>Partner offers help sponsor the reward process, which is why completing the required deals is needed to unlock your reward.</p>
-      </details>
+<details>
+<summary>How long do the deals take?</summary>
+<p>Most users complete the required deals in under 10–15 minutes.</p>
+</details>
 
-      <details>
-        <summary>When will I receive my Gift Card?</summary>
-        <p>Once all required deals are completed and verified, your reward can move forward for processing.</p>
-      </details>
+<details>
+<summary>What are deals?</summary>
+<p>Deals are simple tasks like app installs, surveys, or trial offers.</p>
+</details>
 
-      <details>
-        <summary>Is this really free?</summary>
-        <p>Yes. There is no cost to join. You simply complete the required deals to unlock your reward.</p>
-      </details>
-    </section>
+<details>
+<summary>How many deals do I have to do?</summary>
+<p>Most users complete 3–5 deals to unlock their reward.</p>
+</details>
 
-    <a class="cta bottom-cta" href="https://giftclick.org/aff_c?offer_id=317&aff_id=170653">
-      ✓ Start My Rewards
-    </a>
-  </main>
+<details>
+<summary>Do I need to complete all deals?</summary>
+<p>Yes. Completing the required deals is how users unlock their reward.</p>
+</details>
+
+<details>
+<summary>Why do I need to complete deals?</summary>
+<p>Partner offers help sponsor the reward process.</p>
+</details>
+
+<details>
+<summary>When will I receive my Gift Card?</summary>
+<p>Once all steps are completed and verified, your reward is processed.</p>
+</details>
+
+</div>
+
+<a href="https://giftclick.org/aff_c?offer_id=317&aff_id=170653" class="cta bottom-cta">
+Unlock My Reward
+</a>
+
+</div>
+
 </body>
 </html>
